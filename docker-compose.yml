@@ -1,0 +1,15 @@
+services:
+  hardlink:
+    build: .
+    container_name: hardlink
+    restart: unless-stopped
+    user: 568:568
+    environment:
+      - TZ=America/Chicago
+      - SOURCE=/media/Downloads/complete/anime
+      - DEST=/media/Library/anime
+      - MASTER=/media/masterhardlink/anime
+      - LOG_DIR=/logs
+    volumes:
+      - /mnt/BigData/Media:/media
+      - /var/log/jellyfin-hardlink:/logs
