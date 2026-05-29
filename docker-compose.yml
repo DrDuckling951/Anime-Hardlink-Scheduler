@@ -11,5 +11,5 @@ services:
       - MASTER=/media/masterhardlink/anime
       - LOG_DIR=/logs
     volumes:
-      - /mnt/BigData/Media:/media
-      - /var/log/jellyfin-hardlink:/logs
+      - /mnt/DATASET/Media:/media
+      - /var/log/hardlink:/logs
